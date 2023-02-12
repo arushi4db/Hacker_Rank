@@ -1,0 +1,3 @@
+[submodule "subcluster1"]
+	path = subcluster1
+	url = https://Arushisingh@bitbucket.org/arushidb/cluster.git
