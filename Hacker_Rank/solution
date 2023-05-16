@@ -1,0 +1,12 @@
+Problem: https://www.hackerrank.com/challenges/the-company/problem
+
+Solution: By using MS SQl Server
+
+
+SELECT  DISTINCT c.company_code,c.founder, COUNT(DISTINCT Lead_manager_code), COUNT(DISTINCT Senior_manager_code),COUNT(DISTINCT manager_code), COUNT(DISTINCT Employee_code)
+FROM EMPLOYEE AS E
+INNER JOIN COMPANY AS C
+ON
+ E.COMPANY_CODE = C.COMPANY_CODE
+group by c.COMPANY_CODE, c.founder
+ORDER BY COMPANY_CODE 
