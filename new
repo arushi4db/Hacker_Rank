@@ -1,0 +1,12 @@
+Hacker Rank Question: https://www.hackerrank.com/challenges/full-score/problem
+
+SOLUTION: select h.hacker_id, h.name 
+from Hackers h
+left join  Submissions s on h.hacker_id=s.hacker_id
+left join  Challenges c on c.Challenge_id = s.Challenge_id
+left join Difficulty d on d.difficulty_level = c.difficulty_level
+where d.score = s.score
+group by h.hacker_id, h.name
+having count (s.challenge_id)>1  
+order by count (s.challenge_id) desc, h.hacker_id 
+
